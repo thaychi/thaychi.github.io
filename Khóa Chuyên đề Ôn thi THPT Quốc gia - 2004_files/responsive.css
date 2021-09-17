@@ -1,0 +1,562 @@
+﻿@media (min-width: 0) {   
+    .menu_box {float: left;min-width: 624px}
+    .menu_main {margin: 0; padding: 0; list-style: none;float: right}
+    .menu_main > li {float: left; margin: 0 5px; position: relative;}
+    .menu_main > li:first-child {margin-left: 0;}
+    .menu_main > li:last-child {margin-right: 0;}
+    .menu_main > li > a {color: white; font: 14px/40px SegoeUISemiBold; padding: 0 30px; background-color: #e03627; border-radius: 4px; display: block;}
+    .menu_main > li.active > a, .menu_main > li > a.active,
+    .menu_main > li:hover > a {color: #333; background-color: #ffe600}
+     
+    .menu_main li.home a {font-size: 0; width: 48px; background-image: url(../css/Pic/home_icon.png); background-position: center center; background-repeat: no-repeat;}
+    .menu_main li.home:hover a, .menu_main li.home.active a,
+    .menu_main li.home a.active {background-image: url(../css/Pic/home_icon_hover.png);}
+
+    .menu_main li .sub_menu {margin: 0; padding: 30px 0 0; list-style: none; display: none !important; min-width: 210px; position: absolute; left: -15px; top: 100%; z-index: 9;}
+    .menu_main li:hover > .sub_menu {display: block;}
+    .menu_main .sub_menu li {position: relative;}
+    .menu_main .sub_menu li span.open_sub {display: none;}
+    .menu_main .sub_menu li a {font: 14px/24px SegoeUIBold; color: #333; display: block; padding: 4px 15px; background: #fff;}
+    .menu_main .sub_menu li:hover > a {background-color: #013f90; color: #fff;}
+     
+    .menu_main li .sub_menu .sub_menu {top: 0; left: -100%; padding-top: 0; display: none;}
+    .menu_main li .sub_menu li:hover .sub_menu {display: block;}
+    .menu_main .sub_menu .sub_menu li a {background: #fff;}
+     
+    .menu_main > li:nth-child(3) ~ li > .sub_menu {left: auto; right: 0;}
+    .menu_main .sub_menu .sub_menu .sub_menu {display: none;}
+
+    .menu_res_btn, .footer_box .clear {display: none;}
+
+    #baiHoc .content {
+      display:-webkit-box;
+      display:-webkit-flex;
+      display:-ms-flexbox;
+      display:flex;
+      -webkit-box-pack:start;
+      -webkit-justify-content:flex-start;
+      -ms-flex-pack:start;
+      justify-content:flex-start;
+      -webkit-box-orient:horizontal;
+      -webkit-box-direction:normal;
+      -webkit-flex-direction:row;
+      -ms-flex-direction:row;
+      flex-direction:row;
+      -webkit-flex-wrap:wrap;
+      -ms-flex-wrap:wrap;
+      flex-wrap:wrap;
+    }
+
+    #baiHoc .content .content_left {
+    width:28%;
+    }
+    #baiHoc .content .content_right {
+        width:72%;
+        margin-left:-1px;
+    }
+    #baiHoc .content .content_right .khungVideo {
+        height:calc(100vh - 110px);
+    }
+}
+
+@media (min-width: 768px) {  
+    .full_info .tab {padding: 0; list-style: none; background: #ececec; margin: 0; z-index: 9999;}
+    .full_info .tab.stick {position: fixed; top: 0;} 
+    .full_info .tab li {float: left; display: block !important; width: 25%;}
+    .full_info .tab li.init {display: none !important;}
+    .full_info .tab li a {height: 46px; line-height: 46px; font: 15px/46px SegoeUISemiBold; color: #333; text-align: center; cursor: pointer; padding: 0; border-radius: 0 0 4px 4px; text-transform: uppercase; display: block;}
+    .full_info .tab li.active a, .full_info .tab li a.active,
+    .full_info .tab li:hover a {background: url(../css/Pic/tab_bg.png) no-repeat; background-size: 100% 100%; color: #fff;}
+}
+
+/*@media (max-width: 1199px){
+    .container {width: calc(100% - 40px);}
+	.noidung img {height: 100% !important;}
+	.noidung table, .noidung table td, .noidung table tr, 
+	.noidung table tbody {display: block !important; max-width: 100%; height: auto !important; margin: 0 auto;}
+    .master_page {padding: 20px 0 30px;}
+    .home_page {padding: 0;}
+    .btn_top {display: none !important;}
+
+    .huong_dan_hoc {padding-bottom: 50px;}
+    
+    .header_box .header_right .hotline, .top_box .top_right .btn_click, .bottom_box .link, .top_box .top_right .info {display: none !important;}
+
+    .info_ac {float: left; width: auto; margin-right: 15px; height: auto;}
+    .info_ac .khungAnh {border: 1px solid #e03627;}
+    .info_ac a.name {color: #333; width: auto;}
+
+    .sidebar, .sidebar_1, .sidebar_2 {display: none;}
+    .master_main, .master_main_1, .master_main_2 {width: 100%; float: none; margin-right: 0;}
+
+    .top_box .top_right {border: none; padding-left: 0;}
+    .news_hot {width: calc(100% - 310px);}
+
+    .header_box .header_right .trac_nghiem {margin-right: 8px;}
+    .header_box .header_right .btn_click {float: left;}
+    .btn_click .register {height: 40px; line-height: 40px; min-width: 133px; text-align: center; margin-top: 0;}
+    .btn_click .login {height: 40px; line-height: 40px; min-width: 133px; text-align: center; margin-top: 0;}
+    
+    .menu_res_btn {float: right; width: 40px; height: 40px; display: block; margin-left: 15px; font-size: 0; border-left: 1px solid #fff;}
+    .open_menu_res {display: inline-block; background: url(../Css/Pic/open_menu_res.png) no-repeat right center; width: 40px; height: 40px; font-size: 0; cursor: pointer;}
+    .open_menu_res.active {background: url(../Css/Pic/open_menu_res_active.png) no-repeat right center;}
+    
+    .menu_box {position: absolute; top: calc(100% + 40px); left: 0; z-index: 100; max-height: 0; transition: 0.5s; overflow-y: hidden; width: 100%; background: #c1392c;}
+    .menu_box.active {max-height: 2000px;}
+    ul.menu_main {margin: 0; width: 100%; padding: 0; list-style: none;}
+    .menu_main > li > a {font-family: SegoeUIBold; font-size: 15px; line-height: 24px; display: block; color: #fff; padding: 8px 10px; background: #c1392c; text-transform: uppercase; color: #fff;}
+    .menu_main > li:last-child {border-bottom: none;}
+    .menu_main > li {position: relative; border-bottom: 1px solid #a21c16; border-top: 1px solid #e05642;}
+    .menu_main > li.active > a {background-color: #d8584c;}
+
+    .menu_main .sub_menu li span.open_sub,
+    .menu_main > li > span.open_sub {height: 40px; width: 40px; z-index: 3; border: none; top: 0; background: url(../Css/Pic/list_icon_2r_hover.png) center center no-repeat; right: 0;}
+    .menu_main > li > span.open_sub {position: absolute; cursor: pointer;}
+    .menu_main .sub_menu li span.open_sub {position: absolute; padding-right: 5px;}
+    .menu_main li.active > span.open_sub {background: url(../Css/Pic/list_icon_2r.png) center center no-repeat;}
+
+    .menu_main li .sub_menu {max-height: 0; overflow: hidden; transition: max-height .5s ease-out; margin: 0; padding: 0; list-style: none; background: #d8584c;}
+    .menu_main li.active > .sub_menu {max-height: 1000px; padding-bottom: 10px;}
+    .menu_main .sub_menu li {position: relative;}
+    .menu_main .sub_menu li a {color: #fff; font: 15px/24px SegoeUI; padding: 8px 10px 8px 20px; display: block;}
+    .menu_main .sub_menu li:first-child a {}
+    .menu_main .sub_menu li > a:hover, .menu_box .sub_menu li.active > a {background: #d8584c !important;}
+    .menu_main .sub_menu li:last-child a {border-bottom: none;}
+    .menu_main .sub_menu .sub_menu {display: none;}
+    .menu_main .sub_menu .sub_menu li a {color: #fff; text-transform: none; font: 15px/24px SegoeUI; padding: 8px 120px 8px 30px; color: #fff; background: #d8584c;}
+
+    .slider_box .col_1, .slider_box .col_2 {float: none; width: 100%; margin-right: 0;}
+    .slider_box .col_2 {display: none;}
+
+    .khoa_hoc_hot .item_box:nth-child(n) {width: calc((100% - 30px)/2); margin-right: 30px;}
+    .khoa_hoc_hot .item_box:nth-child(2n) {margin-right: 0;}
+    .khoa_hoc_hot .item_box:nth-child(2) ~ .item_box {margin-top: 30px;}
+
+    .trac_nghiem_home .item_box:nth-child(n) {float: none; width: 100%; margin-right: 0;}
+    .trac_nghiem_home .item_box:nth-child(1) ~ .item_box {margin-top: 24px;}
+    .trac_nghiem_home .khungAnh {width: calc(270/728*100%);}
+    .trac_nghiem_home .item_details {float: left; width: calc(100% - 270/728*100% - 35px);}
+    .trac_nghiem_home .item_title {margin-top: 20px;}
+
+    .gioi_thieu_home {padding: 40px 0 30px 15px;}
+    .gioi_thieu_home .content {max-width: calc(420/728*100%);}
+    .gioiThieuHome .col1 {width: 100%; margin-right: 0;}
+    .gioiThieuHome .col2 {width: 100%; margin-top: 25px;}
+
+    .taiLieuHome {padding: 30px 0;}
+    .taiLieuHome .box {width: 100%;}
+    .taiLieuHome .box .content {border-right: none;}
+    
+    .footer_box .clear {float: left; width: 100%; height: 25px;}
+    .footer_box .col_1, .footer_box .col_2.col_2a {width: calc(50% - 20px); margin-right: 40px;}
+    .footer_box .col_2, .footer_box .col_3  {width: calc(50% - 20px); margin-right: 0;}
+    
+    .account_page .menu_left {margin-bottom: 25px;}
+    .account_tt .col_1, .account_tt .col_2 {float: none; width: 100%; margin-right: 0;}
+    .account_tt .col_3 {float: none; margin-top: 25px;}
+    .account_tt .col_2 {margin-top: 20px;}
+
+    .ql_khoa_hoc .item_box:nth-child(n) {float: left; width: calc((100% - 30px)/2); margin-right: 30px;}
+    .ql_khoa_hoc .item_box:nth-child(2n) {margin-right: 0;}
+    .ql_khoa_hoc .item_box:nth-child(2) ~ .item_box {margin-top: 30px;}
+
+    .why_choose {background-image: none; margin-left: 0 !important; margin-right: 0 !important; margin-top: 30px; width: 100% !important;}
+
+    .gio_hang_c .col_1, .gio_hang_c .col_2 {width: 100%; float: none; margin-right: 0;}
+    .gio_hang_c .col_2 {margin-top: 25px;}
+
+    .tt_dathang .col_1, .tt_dathang .col_2 {float: none; margin-right: 0;}
+    .tt_dathang .col_2 {margin-top: 20px;}
+
+    .giangvien_ds .item_box:nth-child(n) {float: left; width: calc((100% - 80px)/3); margin-right: 40px;}
+    .giangvien_ds .item_box:nth-child(3n) {margin-right: 0;}
+    .giangvien_ds .item_box:nth-child(3) ~ .item_box {margin-top: 50px;}
+
+    .news_ds .item_title {margin-top: -7px;}
+    .news_ds .khungAnh:before {padding-bottom: calc(210/330*100%);}
+
+    .newsHome .itemBox {width: 100%; margin-right: 0;}
+    .newsHome .itemBox:nth-child(1) ~ .itemBox {padding-top: 25px; border-top: 1px solid #ececec; margin-top: 25px;}
+
+    .lienhe_c .col_1, .lienhe_c .col_2 {float: none; width: 100%; margin-right: 0;}
+    .lienhe_c .col_2 {margin-top: 25px;}
+
+    .tracnghiem_ds .item_box:nth-child(n) {float: left; width: calc((100% - 30px)/2); margin-right: 30px;}
+    .tracnghiem_ds .item_box:nth-child(2n) {margin-right: 0;}
+    .tracnghiem_ds .item_box:nth-child(2) ~ .item_box {margin-top: 30px;}
+
+    .dethi_ds .item_box:nth-child(n) {float: left; width: calc((100% - 30px)/2); margin-right: 30px;}
+    .dethi_ds .item_box:nth-child(2n) {margin-right: 0;}
+    .dethi_ds .item_box:nth-child(2) ~ .item_box {margin-top: 30px;}
+
+    .bai_thi.lam_bai .title {padding-left: 15px; padding-right: 15px;}
+    .list_cauhoi_ds .item_box {padding-left: 15px; padding-right: 15px;}
+    .bai_thi.lam_bai .box_bottom {width: 100%; padding: 0 15px;}
+
+    .short_info .col_1, .short_info .col_2 {float: none; width: 100%; margin-right: 0;}
+    .short_info .col_2 {margin-top: 25px;}
+
+    .review_form .content .col_1 {width: calc(370/810*100%);}
+    .review_form .content .col_2 {width: calc(100% - 370/810*100% - 10px);}
+
+    #baiHoc .content {
+    display:block;
+    position:relative;
+    }
+    #baiHoc .content .content_left {
+    float:left;
+    position:absolute;
+    height:100%;
+    width: 34%;
+    }
+    #baiHoc .content .content_left .tab-content {
+    height:calc(100% - 150px);
+    }
+    #baiHoc .content .content_left .tab-content .tab-pane {
+    height:100%;
+    overflow:auto;
+    overflow-y:scroll;
+    }
+    #baiHoc .content .content_right {
+    float:left;
+    margin-left:34%;
+    width: 66%;
+    }
+    #baiHoc .content .nav-bottom {
+    clear:both;
+    }
+    #baiHoc .content .content_left ul.nav li {
+    width:50%;
+    }
+    #baiHoc .content .content_left .itemBaiHoc .item {
+    padding-left:10px;
+    height:auto;
+    }
+    #baiHoc .content .content_left .itemBaiHoc .item:before {
+    display:none;
+    }
+    #baiHoc .content .content_left .itemBaiHoc .item a.name {
+    font-size:14px;
+    height:auto;
+    }
+    #baiHoc .content .content_left .itemBaiHoc .item span.time {
+    margin-bottom:5px;
+    }
+    #baiHoc .content .content_left #thaoLuan {
+    padding:10px;
+    }
+    #baiHoc .content .content_left #thaoLuan .formNhanXet .item .user p.cauHoi {
+    margin-bottom:0;
+    }
+    #baiHoc .content .content_left #thaoLuan .formNhanXet .item .user .outer div.info {
+    -webkit-flex-wrap:wrap;
+    -ms-flex-wrap:wrap;
+    flex-wrap:wrap;
+    height:auto;
+    }
+    #baiHoc .content .content_left #thaoLuan .formNhanXet .item .user .outer div.info span.name {
+    width:100%;
+    }
+    #baiHoc .content .content_left #thaoLuan .formNhanXet .item .user .outer div.info span.time {
+    line-height:17px;
+    }
+    #baiHoc .content .content_left #thaoLuan .formNhanXet .item div.traLoi {
+    padding:7px;
+    }
+    #baiHoc .content_right {
+    width:66%;
+    margin-left:-1px;
+    }
+    #baiHoc .nav-bottom .tiendo {
+    width:34%;
+    }
+    #baiHoc .nav-bottom .auto-play {
+    width:160px;
+    }
+    #baiHoc .content .content_left .itemBaiHoc .group_item .title_1{
+    padding: 0 10px;
+    }
+
+    #baiHoc .hoi_dap .item_answer {margin-left: 0;}
+}
+
+
+@media (max-width: 767px){
+    .container {width: calc(100% - 20px);}
+    .thongke_ngay {width: 100%; border-bottom: 3px solid #fff; margin-left: 0; padding-left: 25px; background: url(../Css/Pic/date_ct.png) no-repeat left 5px top 6px;}
+    .thongke_luotxem {margin-left: 5px; padding-left: 25px;}
+    #CommonCuoiChiTietTin .fl {padding: 0 5px; width: 100%; border-bottom: 3px solid #fff;}
+    #CommonCuoiChiTietTin .fl .fr {display: inline-block; margin-left: 15px; float: none;}
+    #CommonCuoiChiTietTin > .fr {float: left; padding: 0 5px;}
+    #CommonCuoiChiTietTin a.email {margin-left: 0;}
+    .SplitPages {margin-top: 30px;}
+    .SplitPages a {margin-bottom: 5px;}
+
+    .header_box {padding: 5px 0 10px;}
+    .header_box .logo {width: 100%; float: none; margin-right: 0; margin-top: 0;}
+    .header_box .header_right {float: left; margin-top: 10px;}
+    .header_box .header_right .trac_nghiem, .btn_click .register, .btn_click .login {height: 34px; line-height: 34px; font-size: 11px; min-width: 90px; text-align: center;}
+    .btn_click .register span, .btn_click .login span {background: none; padding-left: 0;}
+
+    .info_ac {float: none; margin-bottom: 10px; margin-right: 0;}
+
+    .top_box {margin-bottom: 10px;}
+    .news_hot {display: none !important;}
+    .breadcrumb_box {width: calc(100% + 20px); margin: 0 -10px; padding-left: 10px; padding-right: 10px; border-bottom: 1px solid #fff;}
+
+    .slider_box .slide_content .khungAnh:before {padding-bottom: calc(200/300*100%);}
+    .slider_box .quang_cao_home .item_box:nth-child(n) {float: left; width: calc((100% - 10px)/2); margin-right: 10px;}
+    .slider_box .quang_cao_home .item_box:nth-child(2n) {margin-right: 0;}
+    .slider_box .quang_cao_home .item_box:nth-child(2) ~ .item_box {margin-top: 10px;}
+
+    .khoa_hoc_hot {padding: 40px 0 40px;}
+    .khoa_hoc_hot .item_box:nth-child(n) {width: 100%; float: none; margin-right: 0;}
+    .khoa_hoc_hot .item_box:nth-child(1) ~ .item_box {margin-top: 20px;}
+    .khoa_hoc_hot .item_title {height: auto;}
+
+    .khoa_hoc_hot .slick-list {margin: 0 -5px;}
+    .khoa_hoc_hot .slick-list .item {padding: 0 5px;}
+
+    .trac_nghiem_home  {padding: 35px 0;}
+    .trac_nghiem_home .title a {font-size: 20px; padding: 0; background: none;}
+    .trac_nghiem_home .header span.line {display: none;}
+    .trac_nghiem_home .khungAnh, .trac_nghiem_home .item_details {float: none; margin-right: 0; width: 100%;}
+    .trac_nghiem_home .item_details {padding: 0 15px 20px;}
+    .trac_nghiem_home .item_title {margin-top: 15px; height: auto;}
+    .trac_nghiem_home a.more {font-size: 14px; padding: 0 10px; margin-top: 25px;}
+
+    .gioi_thieu_home {padding: 35px 10px 30px; background-image: none; min-height: auto; margin-bottom: 50px;}
+    .gioi_thieu_home .content {max-width: 100%;}
+    .gioi_thieu_home .title a {letter-spacing: -0.5px;}
+
+    .footer_box .col_2 .title {margin-bottom: 15px;}
+    .footer_box .col_3 .title, .footer_box .logo {margin-bottom: 20px;}
+    .footer_box .clear {display: none;}
+    .footer_box .col_1, .footer_box .col_2.col_2a, 
+    .footer_box .col_2, .footer_box .col_3  {width: 100%; float: none; margin-right: 0;}
+    .footer_box .col_2, .footer_box .col_3 {margin-top: 25px;}
+
+    .huong_dan_hoc {padding: 20px 0 30px;}
+    .huong_dan_hoc .title {background: url(../css/Pic/hd_title_bg_1.png) no-repeat center center; height: 46px;}
+    .huong_dan_hoc .title a {font: 18px/52px SegoeUIBold; color: #fff; text-transform: uppercase;}
+    .huong_dan_hoc .text {font: 16px/24px SegoeUIBold; text-align: center;}
+    .huong_dan_hoc .group_item {margin-top: 20px;}
+    .huong_dan_hoc .khungAnh {width: 100px;}
+    .huong_dan_hoc .item_box {width: 50%;}
+    .huong_dan_hoc .item_box:nth-child(2) ~ .item_box {margin-top: 20px;}
+    .huong_dan_hoc .item_box:nth-child(2n) .item_picture {background: none;}
+    .huong_dan_hoc .item_box:nth-child(2n+1) .item_picture:before {left: 50%;}
+    .huong_dan_hoc .item_box:nth-child(2n) .item_picture:before {left: -50%;}
+    .huong_dan_hoc .item_title {margin: 20px 0 0; overflow: hidden; height: 50px; text-align: center;}
+    .huong_dan_hoc .item_title a {font: 15px/24px SegoeUIBold; color: #333;}
+
+    .ql_khoa_hoc .item_box:nth-child(n) {float: none; width: 100%; margin-right: 0; margin-top: 0;}
+    .ql_khoa_hoc .item_box:nth-child(1) ~ .item_box {margin-top: 20px;}
+    .ql_khoa_hoc .item_title {height: auto;}
+
+    .box_donhang .col_1 {border-bottom: 1px solid #e2e2e2 !important;}
+    .box_donhang .col_1, .box_donhang .col_2 {float: none; width: 100%; border: none; padding-left: 10px; padding-right: 10px;}
+
+    .box_top .date_time, .box_top .icon_social {width: 100%; float: none;}
+    .box_top .icon_social {margin-top: 10px;}
+
+    .why_choose {padding: 25px 10px;}
+    .why_choose .title {margin-bottom: 25px;}
+
+    .giohang_ds .item_title {margin-top: -5px;}
+
+    .gio_hang_c .col_2 .btn_click a {width: 100%; margin-right: 0;}
+    .gio_hang_c .col_2 .btn_click a.cancel {margin-top: 10px;}
+
+    .giangvien_ds .item_box:nth-child(n) {float: none; width: 100%; margin-right: 0;}
+    .giangvien_ds .item_box:nth-child(1) ~ .item_box {margin-top: 30px;}
+    .giangvien_ds .item_title {height: auto; max-height: 46px;}
+
+    .news_ds .khungAnh, .news_ds .item_details {float: none; width: 100%; margin-right: 0;}
+    .news_ds .item_details {margin-top: 20px;}
+    .news_ds .item_title, .news_ds .item_description {height: auto;}
+
+    .news_other .item_box:nth-child(n) {width: 100%; float: none; margin-right: 0;}
+    .news_other .item_box:nth-child(1) ~ .item_box {margin-top: 20px;}
+
+    .tracnghiem_ds .item_box:nth-child(n) {width: 100%; float: none; margin-right: 0;}
+    .tracnghiem_ds .item_box:nth-child(1) ~ .item_box {margin-top: 20px;}
+    .tracnghiem_ds .item_title {height: auto;}
+
+    .dethi_ds .item_box:nth-child(n) {width: 100%; float: none; margin-right: 0;}
+    .dethi_ds .item_box:nth-child(1) ~ .item_box {margin-top: 20px;}
+    .dethi_ds .item_title {height: auto;}
+
+    .bai_thi img.check {margin-top: 30px;}
+    .bai_thi .container {padding-bottom: 30px;}
+    .bai_thi .btn_click {margin-top: 20px;}
+
+    .bai_thi.lam_bai .title .time {float: none; margin-top: 10px;}
+    .bai_thi .btn_click a {padding: 0 15px;}
+    .list_cauhoi_ds .item_title {float: none; width: auto;}
+    .list_cauhoi_ds .item_details {float: none; width: auto;}
+
+    .list_cauhoi_ds .content .item:nth-child(n) {width: 100%; float: none; margin-right: 0;}
+    .list_cauhoi_ds .content .item.true:before {left: -14px;}
+
+    .bai_thi.lam_bai .chuyen_trang {margin-top: 25px; width: 100%; text-align: center;}
+    .bai_thi.lam_bai .chuyen_trang a {float: none !important; display: inline-block;}
+
+    .bai_thi.lam_bai .btn_click {margin-top: 20px; width: 100%;}
+    .bai_thi.lam_bai .btn_click a {width: 100%; margin-right: 0;}
+    .bai_thi.lam_bai .btn_click a.cancel {margin-top: 10px;}
+
+    .box_top_1 .date_time, .box_top_1 .gv {margin-right: 0; width: 100%;}
+
+    .short_info {margin-top: 20px;}
+
+    .giang_vien .khungAnh {float: none; margin: 0 auto;}
+    .giang_vien .details {float: none; width: 100%; margin-top: 20px;}
+    .giang_vien .gv_title {text-align: center;}
+
+    .hoi_dap .item_answer {margin-left: 0; padding-left: 10px; padding-right: 10px;}
+
+    .review_form .content .col_1, .review_form .content .col_2 {width: 100%; float: none; margin-right: 0;}
+    .review_form .content .col_2 {margin-top: 20px; padding-bottom: 20px;}
+
+    .noidung_khoahoc {margin-bottom: 25px;}
+    .noidung_khoahoc .group_item .time {display: none;}
+    .noidung_khoahoc .group_item .title {width: calc(100% - 40px); border: none;}
+    
+    .full_info .tab {position: relative; height: 40px; z-index: 19; margin: 0 0 0; padding: 0; list-style: none;}
+    .full_info .tab li {padding: 0 10px; width: 100%; overflow: hidden; background: #e03627; border-bottom: 1px solid #fff;}
+    .full_info .tab li a {background: url(../css/Pic/list_icon_2r_hover.png) no-repeat right 0 center; display: block; position: relative; font: 16px/40px SegoeUIBold; text-transform: uppercase; color: #fff; white-space: nowrap; color: #fff;}
+    .full_info .tab li:last-child a {border-bottom: none;}
+    .full_info .tab li:not(.init) {display: none;}
+    .full_info .tab li:not(.init) a {background-image: none;}
+
+    .menu_box {top: calc(100% + 40px);}
+	
+	.page_title_1 .sl {display: none;}
+
+    .popup_register .modal_popup_content {width: calc(100% - 30px); padding-left: 10px; padding-right: 10px; padding-bottom: 20px; padding-top: 10px;}
+    .popup_register .form .box input, .popup_register .form .box select {width: 100% !important;}
+
+    .popup_register .group_checkbox .item label {width: calc(100% - 18px);}
+    .popup_register .btn_click a {width: auto; padding: 0 20px;}
+    .popup_register .form .box {margin-bottom: 0;}
+    .popup_register .text {margin-bottom: 10px;}
+    .popup_register .group_checkbox {margin-top: 15px;}
+    .popup_register .btn_click {margin-top: 20px;}
+
+    .popup_register .close_modal:after {right: -15px;}
+
+    .popup_login .modal_popup_content {width: calc(100% - 30px); padding-left: 10px; padding-right: 10px; padding-bottom: 20px; padding-top: 10px;}
+    .popup_login .form .box input, .popup_login .form .box select {width: 100% !important;}
+    .popup_login .group_checkbox .item input {width: 13px !important;}
+
+    .popup_login .group_checkbox .item label {width: calc(100% - 18px);}
+    .popup_login a.submit {width: auto; padding: 0 10px;}
+    .popup_login #password a.submit {padding: 0 30px;}
+    .popup_login .form .box {margin-bottom: 0;}
+    .popup_login .text {margin-bottom: 10px;}
+    .popup_login .group_checkbox {margin-right: 10px;}
+    .popup_login .form .box.bottom {padding-left: 0; display: table; margin: 20px auto 0;}
+
+    .popup_login .close_modal:after {right: -15px;}
+
+    #baiHoc .content .content_left {
+    width:100%;
+    position:static;
+    }
+    #baiHoc .content .content_left .itemBaiHoc .item {
+    padding-left:10px;
+    height:auto;
+    }
+    #baiHoc .content .content_left .itemBaiHoc .item:before {
+    display:none;
+    }
+    #baiHoc .content .content_left .itemBaiHoc .item a.name {
+    font-size:12px;
+    height:auto;
+    max-height:44px;
+    }
+    #baiHoc .content .content_left .itemBaiHoc .item span.time {
+    margin-bottom:5px;
+    }
+    #baiHoc .content .content_left .tab-content .tab-pane {
+    height:300px;
+    }
+    #baiHoc .content #thaoLuan {
+    padding:10px;
+    }
+    #baiHoc .content #thaoLuan .formNhanXet .item .user p.cauHoi {
+    margin-bottom:0;
+    }
+    #baiHoc .content #thaoLuan .formNhanXet .item .user .outer div.info {
+    -webkit-flex-wrap:wrap;
+    -ms-flex-wrap:wrap;
+    flex-wrap:wrap;
+    height:auto;
+    }
+    #baiHoc .content #thaoLuan .formNhanXet .item .user .outer div.info span.name {
+    width:100%;
+    }
+    #baiHoc .content #thaoLuan .formNhanXet .item .user .outer div.info span.time {
+    line-height:17px;
+    }
+    #baiHoc .content #thaoLuan .formNhanXet .item div.traLoi {
+    padding:7px;
+    }
+    #baiHoc .content .nav-bottom {
+    height:auto;
+    }
+    #baiHoc .content .nav-bottom .tiendo {
+    width:calc(100% - 20px - 90px);
+    }
+    #baiHoc .content .nav-bottom .play {
+    width:90px;
+    }
+    #baiHoc .content .nav-bottom .auto-play {
+    width:50%;
+    }
+    #baiHoc .content .nav-bottom .ngongan {
+    }
+    #baiHoc .content .content_right {
+    margin-top:20px;
+    width:100%;
+    margin-left:0;
+    }
+    #baiHoc .content .content_right .top-nav {
+    -webkit-flex-wrap:wrap;
+    -ms-flex-wrap:wrap;
+    flex-wrap:wrap;
+    }
+    #baiHoc .content .content_right .top-nav a.prev {
+    width:30px;
+    }
+    #baiHoc .content .content_right .top-nav a.name {
+    padding-left:5px;
+    font-size:11px;
+    width:calc(100% - 52px - 30px);
+    }
+    #baiHoc .content .content_right .top-nav a.back {
+    font-size:10px;
+    width:70px;
+    }
+	#baiHoc .content .content_right .top-nav span.name {
+		width: calc(100% - 70px - 30px);
+		font-size: 12px;
+	}
+
+    .gioi_thieu_home .right {width: 100%; margin-top: 25px;}
+    .gioi_thieu_home {margin-bottom: 0;}
+    .taiLieuHome .box .content {padding-left: 0; padding-right: 0;}
+
+    .newsHome .khungAnh {width: 100%; margin-right: 0;}
+    .newsHome .itemDetail {width: 100%; margin-top: 15px;}
+
+    .taiLieuDS .itemBox .khungAnh {width: 100%; margin-right: 0;}
+    .taiLieuDS .itemBox .itemDetail {width: 100%; margin-top: 15px;}
+
+    .taiLieuDS .itemBox {padding: 10px;}
+    .taiLieuDS .itemBoxOther .itemMore {display: none;}
+    .taiLieuDS .itemBoxOther {padding: 0 10px;}
+    .taiLieuDS .btnClick {padding-left: 10px; padding-right: 10px;}
+    .taiLieuDS .itemBoxOther .itemTitle a {font-size: 16px;}
+}*/

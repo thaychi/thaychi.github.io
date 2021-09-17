@@ -1,0 +1,32 @@
+﻿function ResetAllTextBox(parrentId) {
+    jQuery(parrentId + " input[type=text]").each(function () {
+        jQuery(this).val("");
+    });
+    jQuery(parrentId + " input[type=password]").each(function () {
+        jQuery(this).val("");
+    });
+    jQuery(parrentId + " textarea").each(function () {
+        jQuery(this).val("");
+    });
+}
+
+function CheckEmailValue(email) {
+    var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+    if (!filter.test(email)) {
+        return false;
+    }
+    return true;
+}
+
+function loading(status) {
+    if (!document.getElementById("AjaxLoading")) {
+        var ajaxLoading = '<div class="animationload" onclick="loading(false)"><div class="osahanloading"></div></div>';
+        jQuery("body").append(ajaxLoading);
+    }
+
+    if (typeof status == 'undefined' || status) {
+        jQuery(".animationload").show();
+    } else {
+        jQuery(".animationload").fadeOut();
+    }
+}
